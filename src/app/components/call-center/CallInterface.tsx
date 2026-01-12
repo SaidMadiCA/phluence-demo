@@ -19,260 +19,245 @@ const transcript: TranscriptMessage[] = [
     isStatus: true
   },
   {
-    time: '00:03',
+    time: '00:02',
     speaker: 'Status',
     message: 'IVR System answered',
     isStatus: true
   },
   {
-    time: '00:03',
+    time: '00:02',
     speaker: 'IVR System',
-    message: 'Thank you for calling United Healthcare Specialty Pharmacy Services. Para español, oprima el dos.'
+    message: 'Thank you for calling United Healthcare Specialty Pharmacy Services. Para español, oprima el dos. For your security, this call may be monitored or recorded. Please listen carefully as our menu options have changed. If you are a patient calling about a prescription, press 1. If you are a healthcare provider, press 2. For all other inquiries, press 3.'
   },
   {
-    time: '00:12',
-    speaker: 'IVR System',
-    message: 'For your security, this call may be monitored or recorded.'
-  },
-  {
-    time: '00:20',
-    speaker: 'IVR System',
-    message: 'Please listen carefully as our menu options have changed.'
-  },
-  {
-    time: '00:28',
-    speaker: 'IVR System',
-    message: 'If you are a patient calling about a prescription, press 1. If you are a healthcare provider, press 2. For all other inquiries, press 3.'
-  },
-  {
-    time: '00:45',
+    time: '00:30',
     speaker: 'FRM Agent',
     message: '2'
   },
   {
-    time: '00:47',
+    time: '00:31',
     speaker: 'IVR System',
     message: 'You have reached the healthcare provider line.'
   },
   {
-    time: '00:53',
+    time: '00:35',
     speaker: 'IVR System',
     message: 'If you are calling to submit a new prior authorization, press 1. If you are calling to check the status of an existing prior authorization, press 2. For pharmacy network questions, press 3. To speak with a representative, press 0.'
   },
   {
-    time: '01:18',
+    time: '00:52',
     speaker: 'FRM Agent',
     message: '2'
   },
   {
-    time: '01:20',
+    time: '00:53',
     speaker: 'IVR System',
     message: 'To help us locate your prior authorization, please enter the patient\'s member ID number followed by the pound key. You can find this on the patient\'s insurance card.'
   },
   {
-    time: '01:38',
+    time: '01:05',
     speaker: 'FRM Agent',
-    message: '987654321#'
+    message: '9-8-7-6-5-4-3-2-1'
   },
   {
-    time: '01:42',
+    time: '01:07',
     speaker: 'IVR System',
     message: 'You entered 9-8-7-6-5-4-3-2-1. If this is correct, press 1. To re-enter, press 2.'
   },
   {
-    time: '01:55',
+    time: '01:16',
     speaker: 'FRM Agent',
     message: '1'
   },
   {
-    time: '01:57',
+    time: '01:17',
     speaker: 'IVR System',
     message: 'Thank you. Please hold while we connect you to a representative.'
   },
   {
-    time: '02:05',
+    time: '01:22',
     speaker: 'Status',
     message: 'Hold music playing...',
     isStatus: true
   },
   {
-    time: '04:50',
+    time: '02:30',
     speaker: 'Status',
     message: 'Payer Rep joined the call',
     isStatus: true
   },
   {
-    time: '04:50',
+    time: '02:30',
     speaker: 'Payer Rep',
     message: 'Thank you for holding. This is James Wilson with United Healthcare Specialty Pharmacy Services. May I have your name and your relationship to the patient?'
   },
   {
-    time: '05:05',
+    time: '02:40',
     speaker: 'FRM Agent',
     message: 'Yes, hi James. I am the automated assistant at Phluence. I\'m calling on the request of Dr. Sarah Chen\'s office. Dr. Chen is the prescribing physician.'
   },
   {
-    time: '05:20',
+    time: '02:50',
     speaker: 'Payer Rep : James Wilson',
     message: 'Thank you. Can you confirm the patient\'s name and date of birth for verification purposes?'
   },
   {
-    time: '05:30',
+    time: '02:57',
     speaker: 'FRM Agent',
     message: 'Yes, the patient\'s name is Robert Thompson, date of birth March 15, 1968.'
   },
   {
-    time: '05:42',
+    time: '03:05',
     speaker: 'Payer Rep : James Wilson',
     message: 'Perfect, thank you. I have the patient\'s record pulled up here. And for security purposes, can you confirm the last four digits of the patient\'s member ID?'
   },
   {
-    time: '05:58',
+    time: '03:15',
     speaker: 'FRM Agent',
-    message: 'Yes, that\'s 4321.'
+    message: 'Yes, that\'s 4-3-2-1.'
   },
   {
-    time: '06:03',
+    time: '03:18',
     speaker: 'Payer Rep : James Wilson',
     message: 'Great, thank you. How can I help you today?'
   },
   {
-    time: '06:10',
+    time: '03:23',
     speaker: 'FRM Agent',
     message: 'We submitted a prior authorization request for Mr. Thompson about a week and a half ago, and we\'re calling to check on the status. The medication is for a specialty biologic.'
   },
   {
-    time: '06:28',
+    time: '03:35',
     speaker: 'Payer Rep : James Wilson',
     message: 'Absolutely, let me pull up the prior authorization details. Can you tell me what medication this is for?'
   },
   {
-    time: '06:40',
+    time: '03:43',
     speaker: 'FRM Agent',
     message: 'It\'s for Humira, 40 milligrams, subcutaneous injection.'
   },
   {
-    time: '06:50',
+    time: '03:50',
     speaker: 'Payer Rep : James Wilson',
     message: 'Got it. Let me search our system here... Okay, I see the prior authorization request. It was submitted on December 23rd, 2025. Is that the one you\'re inquiring about?'
   },
   {
-    time: '07:10',
+    time: '04:05',
     speaker: 'FRM Agent',
     message: 'Yes, that\'s correct.'
   },
   {
-    time: '07:15',
+    time: '04:08',
     speaker: 'Payer Rep : James Wilson',
     message: 'Excellent. Good news – I can see that this prior authorization has been approved.'
   },
   {
-    time: '07:25',
+    time: '04:15',
     speaker: 'Payer Rep : James Wilson',
     message: 'The prior authorization approval number is PA-2025-UHC-887452.'
   },
   {
-    time: '07:38',
+    time: '04:23',
     speaker: 'FRM Agent',
     message: 'Okay, let me write that down. PA-2025-UHC-887452. Got it.'
   },
   {
-    time: '07:50',
+    time: '04:32',
     speaker: 'Payer Rep : James Wilson',
     message: 'Correct. The approval date is December 30th, 2025.'
   },
   {
-    time: '08:00',
+    time: '04:38',
     speaker: 'FRM Agent',
     message: 'December 30th, 2025.'
   },
   {
-    time: '08:06',
+    time: '04:42',
     speaker: 'Payer Rep : James Wilson',
     message: 'And the authorization is valid through December 29th, 2026, so you have a full year from the approval date.'
   },
   {
-    time: '08:20',
+    time: '04:52',
     speaker: 'FRM Agent',
     message: 'Perfect. So that\'s an expiration date of December 29th, 2026?'
   },
   {
-    time: '08:28',
+    time: '04:58',
     speaker: 'Payer Rep : James Wilson',
     message: 'That\'s correct.'
   },
   {
-    time: '08:33',
+    time: '05:01',
     speaker: 'FRM Agent',
     message: 'And this covers the Enbrel 50 milligram injections?'
   },
   {
-    time: '08:40',
+    time: '05:06',
     speaker: 'Payer Rep : James Wilson',
     message: 'Yes, the authorization is for Enbrel 50 milligrams subcutaneous injection. It\'s approved for a quantity of 4 syringes per 28 days, which aligns with the typical dosing schedule.'
   },
   {
-    time: '09:00',
+    time: '05:22',
     speaker: 'FRM Agent',
     message: 'Excellent. Is there anything specific the patient needs to do, or can we just send the prescription to the specialty pharmacy?'
   },
   {
-    time: '09:15',
+    time: '05:32',
     speaker: 'Payer Rep : James Wilson',
     message: 'You can send the prescription directly to our contracted specialty pharmacy. The patient is set up with Accredo Specialty Pharmacy. The prescription should reference the prior authorization number I provided. They\'ll also need to contact the specialty pharmacy to set up delivery.'
   },
   {
-    time: '09:40',
+    time: '05:50',
     speaker: 'FRM Agent',
     message: 'Perfect. And the number for Accredo?'
   },
   {
-    time: '09:45',
+    time: '05:54',
     speaker: 'Payer Rep : James Wilson',
     message: 'The specialty pharmacy can be reached at 1-800-803-2523. The patient can also manage their prescription online at Accredo.com.'
   },
   {
-    time: '10:02',
+    time: '06:06',
     speaker: 'FRM Agent',
     message: 'Great. Is there anything else we need to know?'
   },
   {
-    time: '10:08',
+    time: '06:10',
     speaker: 'Payer Rep : James Wilson',
     message: 'Just to confirm – the prior authorization is specifically for the diagnosis code that was submitted, which is rheumatoid arthritis. If the medication is being used for a different indication, a new prior authorization would be required.'
   },
   {
-    time: '10:30',
+    time: '06:26',
     speaker: 'FRM Agent',
     message: 'Understood. It is for rheumatoid arthritis, so we should be all set.'
   },
   {
-    time: '10:40',
+    time: '06:32',
     speaker: 'Payer Rep : James Wilson',
     message: 'Perfect. Is there anything else I can help you with today?'
   },
   {
-    time: '10:48',
+    time: '06:38',
     speaker: 'FRM Agent',
     message: 'No, I think that covers everything. Thank you so much for your help, James.'
   },
   {
-    time: '10:58',
+    time: '06:45',
     speaker: 'Payer Rep : James Wilson',
     message: 'You\'re very welcome. Just to recap, your prior authorization number is PA-2025-UHC-887452, approved on December 30th, 2025, valid through December 29th, 2026. Have a great day!'
   },
   {
-    time: '11:20',
+    time: '07:00',
     speaker: 'FRM Agent',
     message: 'You too, thank you!'
   },
   {
-    time: '11:25',
+    time: '07:03',
     speaker: 'Payer Rep : James Wilson',
     message: 'Goodbye.'
   },
   {
-    time: '11:28',
+    time: '07:05',
     speaker: 'Status',
     message: 'Call ended',
     isStatus: true
@@ -304,8 +289,8 @@ export function CallInterface() {
 
   // Play/stop hold music based on call state
   useEffect(() => {
-    const holdMusicStart = parseTime('02:05'); // When "Hold music playing..." appears
-    const holdMusicEnd = parseTime('04:50');   // When "Payer Rep joined" appears
+    const holdMusicStart = parseTime('01:22'); // When "Hold music playing..." appears
+    const holdMusicEnd = parseTime('02:30');   // When "Payer Rep joined" appears
 
     if (callElapsedSeconds >= holdMusicStart && callElapsedSeconds < holdMusicEnd && isRecording) {
       playHoldMusic();
@@ -414,20 +399,20 @@ export function CallInterface() {
     const interval = setInterval(() => {
       setCallElapsedSeconds(s => {
         // Stop at 11:28 (688 seconds)
-        if (s >= parseTime('11:28')) {
+        if (s >= parseTime('07:05')) {
           setIsRecording(false);
           return s;
         }
 
-        // Normal speed: 0 to 125 seconds (00:00 to 02:05 - before hold)
-        if (s < 125) {
+        // Normal speed: 0 to 82 seconds (00:00 to 01:22 - before hold)
+        if (s < 82) {
           return s + 1;
         }
-        // Fast speed during hold: 125 to 290 seconds (02:05 to 04:50) - skip the 2:45 hold
-        else if (s < 290) {
+        // Fast speed during hold: 82 to 150 seconds (01:22 to 02:30) - skip hold
+        else if (s < 150) {
           return s + 10; // 10x speed to get through the hold time quickly
         }
-        // Normal speed: after 290 seconds (04:50 onwards) - the actual conversation
+        // Normal speed: after 150 seconds (02:30 onwards) - the actual conversation
         else {
           return s + 1;
         }
@@ -496,7 +481,7 @@ export function CallInterface() {
 
   // Stop speaking when the call ends
   useEffect(() => {
-    if (callElapsedSeconds >= parseTime('11:28')) {
+    if (callElapsedSeconds >= parseTime('07:05')) {
       stopAllAudio();
     }
   }, [callElapsedSeconds]);
@@ -762,7 +747,7 @@ export function CallInterface() {
                     </div>
 
                     {/* End Call Button / Call Ended Status */}
-                    {callElapsedSeconds >= parseTime('11:28') ? (
+                    {callElapsedSeconds >= parseTime('07:05') ? (
                       <div className="flex gap-[8px] items-center">
                         {/* Replay Button */}
                         <button
@@ -834,7 +819,7 @@ export function CallInterface() {
                     )}
 
                     {/* Middle Controls (positioned absolute) - hide when call ended */}
-                    {callElapsedSeconds < parseTime('11:28') && (
+                    {callElapsedSeconds < parseTime('07:05') && (
                       <div className="absolute content-stretch flex gap-[4px] items-center left-[calc(50%+0.5px)] top-1/2 translate-x-[-50%] translate-y-[-50%]">
                         {/* CC Button */}
                         <div className="bg-[rgba(255,255,255,0.2)] content-stretch flex items-center justify-center p-[5px] relative rounded-[6px] shrink-0">

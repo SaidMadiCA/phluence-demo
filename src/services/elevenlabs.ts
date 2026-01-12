@@ -13,7 +13,7 @@ export const VOICE_CONFIG = {
   },
   'FRM Agent': {
     voice: 'nova',    // Warm, professional female
-    speed: 1.25,       // Fast, efficient AI
+    speed: 1.0,       // Fast, efficient AI
   },
   'Payer Rep': {
     voice: 'fable',   // Expressive, warm British accent - more human
