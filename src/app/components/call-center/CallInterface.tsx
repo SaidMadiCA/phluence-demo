@@ -30,52 +30,52 @@ const transcript: TranscriptMessage[] = [
     message: 'Thank you for calling United Healthcare Specialty Pharmacy Services. Para español, oprima el dos. For your security, this call may be monitored or recorded. Please listen carefully as our menu options have changed. If you are a patient calling about a prescription, press 1. If you are a healthcare provider, press 2. For all other inquiries, press 3.'
   },
   {
-    time: '00:30',
+    time: '00:22',
     speaker: 'FRM Agent',
     message: '2'
   },
   {
-    time: '00:31',
+    time: '00:23',
     speaker: 'IVR System',
     message: 'You have reached the healthcare provider line.'
   },
   {
-    time: '00:35',
+    time: '00:27',
     speaker: 'IVR System',
     message: 'If you are calling to submit a new prior authorization, press 1. If you are calling to check the status of an existing prior authorization, press 2. For pharmacy network questions, press 3. To speak with a representative, press 0.'
   },
   {
-    time: '00:52',
+    time: '00:40',
     speaker: 'FRM Agent',
     message: '2'
   },
   {
-    time: '00:53',
+    time: '00:41',
     speaker: 'IVR System',
     message: 'To help us locate your prior authorization, please enter the patient\'s member ID number followed by the pound key. You can find this on the patient\'s insurance card.'
   },
   {
-    time: '01:05',
+    time: '00:50',
     speaker: 'FRM Agent',
     message: '9-8-7-6-5-4-3-2-1'
   },
   {
-    time: '01:07',
+    time: '00:52',
     speaker: 'IVR System',
     message: 'You entered 9-8-7-6-5-4-3-2-1. If this is correct, press 1. To re-enter, press 2.'
   },
   {
-    time: '01:16',
+    time: '00:58',
     speaker: 'FRM Agent',
     message: '1'
   },
   {
-    time: '01:17',
+    time: '00:59',
     speaker: 'IVR System',
     message: 'Thank you. Please hold while we connect you to a representative.'
   },
   {
-    time: '01:22',
+    time: '01:03',
     speaker: 'Status',
     message: 'Hold music playing...',
     isStatus: true
@@ -189,12 +189,12 @@ const transcript: TranscriptMessage[] = [
   {
     time: '05:01',
     speaker: 'FRM Agent',
-    message: 'And this covers the Enbrel 50 milligram injections?'
+    message: 'And this covers the Humira 40 milligram injections?'
   },
   {
     time: '05:06',
     speaker: 'Payer Rep : James Wilson',
-    message: 'Yes, the authorization is for Enbrel 50 milligrams subcutaneous injection. It\'s approved for a quantity of 4 syringes per 28 days, which aligns with the typical dosing schedule.'
+    message: 'Yes, the authorization is for Humira 40 milligrams subcutaneous injection. It\'s approved for a quantity of 4 syringes per 28 days, which aligns with the typical dosing schedule.'
   },
   {
     time: '05:22',
@@ -265,7 +265,7 @@ const transcript: TranscriptMessage[] = [
 ];
 
 export function CallInterface() {
-  const [isRecording, setIsRecording] = useState(true);
+  const [isRecording, setIsRecording] = useState(false); // Start paused
   const [callElapsedSeconds, setCallElapsedSeconds] = useState(0);
   const [typingProgress, setTypingProgress] = useState<{ messageIndex: number; charIndex: number } | null>(null);
   const [natalieJoined, setNatalieJoined] = useState(false);
@@ -287,9 +287,27 @@ export function CallInterface() {
     };
   }, []);
 
+  // Pre-fetch first messages and start call after delay
+  useEffect(() => {
+    const firstMessages = transcript
+      .filter(msg => !msg.isStatus && !/^[0-9#*-]{1,20}$/.test(msg.message))
+      .slice(0, 5);
+
+    firstMessages.forEach(msg => {
+      prefetchAudio(msg.message, msg.speaker);
+    });
+
+    // Start call after 2 seconds to allow pre-fetch
+    const startTimer = setTimeout(() => {
+      setIsRecording(true);
+    }, 2000);
+
+    return () => clearTimeout(startTimer);
+  }, []);
+
   // Play/stop hold music based on call state
   useEffect(() => {
-    const holdMusicStart = parseTime('01:22'); // When "Hold music playing..." appears
+    const holdMusicStart = parseTime('01:03'); // When "Hold music playing..." appears
     const holdMusicEnd = parseTime('02:30');   // When "Payer Rep joined" appears
 
     if (callElapsedSeconds >= holdMusicStart && callElapsedSeconds < holdMusicEnd && isRecording) {
@@ -404,11 +422,11 @@ export function CallInterface() {
           return s;
         }
 
-        // Normal speed: 0 to 82 seconds (00:00 to 01:22 - before hold)
-        if (s < 82) {
+        // Normal speed: 0 to 63 seconds (00:00 to 01:03 - before hold)
+        if (s < 63) {
           return s + 1;
         }
-        // Fast speed during hold: 82 to 150 seconds (01:22 to 02:30) - skip hold
+        // Fast speed during hold: 63 to 150 seconds (01:03 to 02:30) - skip hold
         else if (s < 150) {
           return s + 10; // 10x speed to get through the hold time quickly
         }

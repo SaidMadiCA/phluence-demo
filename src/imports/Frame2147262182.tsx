@@ -2168,7 +2168,7 @@ function Frame256() {
 function Frame73() {
   return (
     <div className="content-stretch flex flex-col gap-[4.681px] items-start relative rounded-[9.363px] shrink-0 w-full">
-      <p className="font-['Plus_Jakarta_Sans:Regular',sans-serif] font-normal leading-[1.5] relative shrink-0 text-[#181d27] text-[13px] w-full">And this covers the Enbrel 50 milligram injections?</p>
+      <p className="font-['Plus_Jakarta_Sans:Regular',sans-serif] font-normal leading-[1.5] relative shrink-0 text-[#181d27] text-[13px] w-full">And this covers the Humira 40 milligram injections?</p>
     </div>
   );
 }
@@ -2228,7 +2228,7 @@ function Frame259() {
 function Frame75() {
   return (
     <div className="content-stretch flex flex-col gap-[4.681px] items-start relative rounded-[9.363px] shrink-0 w-full">
-      <p className="font-['Plus_Jakarta_Sans:Regular',sans-serif] font-normal leading-[1.5] relative shrink-0 text-[#181d27] text-[13px] w-full">{`Yes, the authorization is for Enbrel 50 milligrams subcutaneous injection. It's approved for a quantity of 4 syringes per 28 days, which aligns with the typical dosing schedule.`}</p>
+      <p className="font-['Plus_Jakarta_Sans:Regular',sans-serif] font-normal leading-[1.5] relative shrink-0 text-[#181d27] text-[13px] w-full">{`Yes, the authorization is for Humira 40 milligrams subcutaneous injection. It's approved for a quantity of 4 syringes per 28 days, which aligns with the typical dosing schedule.`}</p>
     </div>
   );
 }
